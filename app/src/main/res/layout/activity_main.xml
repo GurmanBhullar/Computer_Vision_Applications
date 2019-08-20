@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/CircleBtn"
+        android:layout_width="401dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:text="Circle"
+        app:layout_constraintBottom_toTopOf="@+id/cornerBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.558" />
+
+    <Button
+        android:id="@+id/cornerBtn"
+        android:layout_width="400dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="28dp"
+        android:text="Corner"
+        app:layout_constraintBottom_toTopOf="@+id/cannyBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CircleBtn" />
+
+    <Button
+        android:id="@+id/cannyBtn"
+        android:layout_width="403dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="24dp"
+        android:text="Edge Detection"
+        app:layout_constraintBottom_toTopOf="@+id/rgbTograyBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cornerBtn" />
+
+    <Button
+        android:id="@+id/rgbTograyBtn"
+        android:layout_width="399dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="12dp"
+        android:text="RGB to Gray"
+        app:layout_constraintBottom_toTopOf="@+id/HistogramEqlBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cannyBtn" />
+
+    <Button
+        android:id="@+id/HistogramEqlBtn"
+        android:layout_width="401dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="3dp"
+        android:text="Histogram Equalizer"
+        app:layout_constraintBottom_toTopOf="@+id/SobelBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgbTograyBtn" />
+
+    <Button
+        android:id="@+id/SobelBtn"
+        android:layout_width="400dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="212dp"
+        android:text="Sobel detection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HistogramEqlBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/PreviewBtn"
+        android:layout_width="128dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginBottom="95dp"
+        android:text="Camera Preview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SobelBtn" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
+        android:text="     Image Processing"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
